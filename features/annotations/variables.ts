@@ -23,3 +23,22 @@ let point: { x: number; y: number } = {
 	x: 20,
 	y: 30,
 };
+
+//Function
+const logNumber: (i: number) => void = (i: number) => {
+	console.log(i);
+};
+
+//Function that returns 'any' like JSON.parse, type in the result variable has to have annotation
+const json = "{ x: 10, y: 20 }";
+const coordinates: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates);
+
+//Use annotation when a variable is going to be initialized later in the process and not at declaration
+let words = ["red", "green", "blue"];
+let foundWord: boolean; //Type annotation when varibale is going to be initialized later
+for (let i = 0; i < words.length; i++) {
+	if (words[i] === "green") {
+		foundWord = true;
+	}
+}
