@@ -42,3 +42,13 @@ for (let i = 0; i < words.length; i++) {
 		foundWord = true;
 	}
 }
+
+//Variable that can take 2 different types
+let numbers = [-10, -20, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+	if (numbers[i] > 0) {
+		numberAboveZero = numbers[i];
+	}
+}
