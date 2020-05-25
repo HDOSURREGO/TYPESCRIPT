@@ -21,3 +21,5 @@ carMaker.map((car: string): string => {
 });
 
 //Flexible and an array can have different types inside
+const importantDates = [new Date(), "2020-10-10"]; //can be read as an or ||
+const importantDate: (string | Date)[] = [new Date()];
