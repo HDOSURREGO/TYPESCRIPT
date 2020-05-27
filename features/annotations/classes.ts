@@ -18,13 +18,17 @@ vehicle.honk();
 console.log(vehicle.color);
 
 class Car extends Vehicle {
+	constructor(public wheels: number, color: string) {
+		//when creating additional features in the child class
+		super(color); //the super calls the constructor of the parent and we have to fill the variable
+	}
 	//you can overwrite a function using the same modifier as the parent class
 	public drive(): void {
 		console.log("vroooom");
 	}
 }
 
-const carro = new Car("blue");
+const carro = new Car(4, "blue"); //this requires both arguments wheels and color
 carro.drive();
 carro.honk();
 console.log(carro.color);
